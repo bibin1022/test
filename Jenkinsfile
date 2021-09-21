@@ -3,15 +3,15 @@ pipeline {
         stages { 
             stage ('Build') { 
                 steps { 
-                    echo "Running build phase"
-					buld.bat
-					archiveArtifacts artifacts : 'a.exe' , fingerprint: true
+                    echo "Running build phase2"
+		    buld.bat
+	            archiveArtifacts artifacts : 'a.exe' , fingerprint: true
                 }
             }
-			stage ('Test') { 
+	    stage ('Test') { 
                 steps { 
-                    echo "Running Test phase"
-					run.bat
+                    echo "Running Test phase2"
+		    run.bat
                 }
             }
         }
