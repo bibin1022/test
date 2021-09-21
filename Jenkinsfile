@@ -4,14 +4,14 @@ pipeline {
             stage ('Build') { 
                 steps { 
                     echo "Running build phase2"
-		    buld.bat
-	            archiveArtifacts artifacts : 'a.exe' , fingerprint: true
+		    bat "buld.bat"
+		    archiveArtifacts artifacts : 'a.exe' , fingerprint: true
                 }
             }
 	    stage ('Test') { 
                 steps { 
                     echo "Running Test phase2"
-		    run.bat
+		    bat "run.bat"
                 }
             }
         }
